@@ -6,7 +6,7 @@ import background from './Hero.jpeg'
 function Hero() {
   return (
     <div className="hero--container">
-        <div className="bg--container"><img src={background} /></div>
+        <div className="bg--container"><img src={background} alt="Hero Backcground"/></div>
         <div className="top-box">BE YOUR OWN ENERGY</div>
         <h1>MAKE YOUR BODY</h1>
         <h2>FIT & PERFECT</h2>

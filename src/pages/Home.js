@@ -4,10 +4,12 @@ import AboutCards from '../components/AboutCards/AboutCards'
 import WhoWeAre from '../components/WhoWeAre/WhoWeAre'
 import BMICalculator from '../components/BMICalculator/BMICalculator'
 import News from '../components/News/News'
+import Navbar from '../components/Navbar/Navbar'
 
 function Home() {
   return (
     <div>
+      <Navbar />
       <Hero />
       <AboutCards />
       <WhoWeAre />  

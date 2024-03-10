@@ -1,0 +1,42 @@
+body{
+    margin-top: 10vh;
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    background-color: black;
+    color: white;
+    padding-inline: 2rem;
+    z-index: 9999999;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--left{
+    font-size: 1.6rem;
+}
+
+.nav--right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav--right li{
+    list-style: none;
+
+}
+
+.nav--right li a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
