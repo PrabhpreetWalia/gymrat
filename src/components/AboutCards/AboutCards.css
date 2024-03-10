@@ -1,0 +1,65 @@
+.about-card-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    cursor: default;
+    margin-bottom: 1rem;
+}
+
+.about-card{
+    z-index: 10000;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    min-height: 25rem;
+    min-width: 300px;
+    padding: 1rem;
+    border-radius: 10% 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+
+.about-card svg{
+    height: 4rem;
+}
+
+.about-card:hover svg path{
+    stroke: var(--primary-color);
+    fill: var(--primary-color);
+}
+
+.about-card--top{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(31, 31, 31);
+    height: 5rem;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
+
+.about-card h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(78, 78, 78);
+}
+
+.about-card:hover{
+    background-image: url(./about\ card\ bg.jpg);
+    background-size: cover;
+
+}
+
+.about-card:hover .about-card--top, .about-card:hover h2{
+    color: white;
+}

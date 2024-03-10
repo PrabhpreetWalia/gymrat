@@ -1,0 +1,11 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --primary-color: #0B60B0;
+    --secondary-color: #000000;
+}

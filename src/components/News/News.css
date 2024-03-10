@@ -1,0 +1,63 @@
+.news--heading{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.news--container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem 0;
+    cursor: default;
+    padding: 2rem;
+}
+
+.news{
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 30%;
+    min-width: 280px;
+    padding: 3rem 2rem;
+    /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.news:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.news .primary-button--container{
+    align-self: center;
+}
+
+.news--date{
+    padding: 0.3rem 0.5rem;
+    border: 1px solid rgb(22, 22, 22);
+    display: inline-block;
+    border-radius: 1rem;
+    color: rgb(22, 22, 22);
+
+}
+
+.news h1{
+    font-size: 1.5rem;
+    color: rgb(22, 22, 22);
+}
+
+.news h2{
+    font-size: 1rem;
+    color: #3f3f3f;
+    margin-bottom: 2rem;
+}
