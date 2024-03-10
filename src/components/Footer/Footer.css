@@ -1,0 +1,62 @@
+.footer--container{
+    width: 100%;
+    padding: 3rem;
+    background: #000;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.footer--container > *{
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 500px;
+}
+
+.details h1{
+    color: var(--primary-color);
+    font-size: 2.1rem;
+    font-weight: 900;
+    margin-bottom: 0.6rem;
+}
+
+.hours--heading{
+    width: fit-content;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    position: relative;
+}
+
+.hours--heading::before{
+    content: " ";
+    position: absolute;
+    height: 0.2rem;
+    width: 30%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.4s ease-in-out;
+}
+
+.footer--container:hover .hours--heading::before{
+    width: 100%;
+}
+
+.working--hours h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.working--hours h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #919090;
+    margin-bottom: 0.4rem;
+}

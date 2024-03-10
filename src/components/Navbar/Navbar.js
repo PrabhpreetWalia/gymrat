@@ -24,6 +24,11 @@ function Navbar() {
           </Link>
         </li>
         <li>
+          <Link rel="stylesheet" to="/gallery">
+            Gallery
+          </Link>
+        </li>
+        <li>
           <Link rel="stylesheet" to="/pricing">
             Pricing
           </Link>
