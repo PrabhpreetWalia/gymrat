@@ -2,10 +2,10 @@ import React from "react";
 import "./News.css";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
-function News() {
+function News({margin = "10vh 0 0 0"}) {
   return (
     <>
-      <div className="news--heading"><span className="main--heading">LATEST NEWS</span></div>
+      <div className="news--heading" style={{margin: margin}}><span className="main--heading">LATEST NEWS</span></div>
       <div className="news--container">
         <div className="news">
           <div className="news--date">22.03.2023</div>

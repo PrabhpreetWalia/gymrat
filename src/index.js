@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import './Index.css'
 import About from './pages/About';
 import Blog from './pages/Blog';
-import Pricing from './pages/Pricing';
-import Contact from './pages/Contact';
+import PricingPage from './pages/PricingPage';
+import ContactUs from './pages/ContactUs';
 import Gallery from './pages/Gallery'
+import Home from './pages/Home';
+import ErrorPage from './pages/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    errorElement: <h1>You Are Lost !!!</h1>,
+    element: <Home />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/about",
@@ -29,11 +31,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/pricing",
-    element: <Pricing />,
+    element: <PricingPage />,
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: <ContactUs />,
   }
 
 ]);

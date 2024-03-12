@@ -6,6 +6,7 @@ import BMICalculator from '../components/BMICalculator/BMICalculator'
 import News from '../components/News/News'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
+import Pricing from '../components/Pricing/Pricing'
 
 function Home() {
   return (
@@ -13,9 +14,14 @@ function Home() {
       <Navbar />
       <Hero />
       <AboutCards />
-      <WhoWeAre />  
+      <WhoWeAre />
+      <News 
+        margin='2rem 0 0 0'
+      />  
       <BMICalculator />
-      <News />
+      <Pricing 
+        margin='2rem 0 0 0'
+      />
       <Footer />
     </div>
   )

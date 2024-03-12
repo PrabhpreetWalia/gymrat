@@ -6,6 +6,8 @@
     background-repeat: no-repeat;
     padding: clamp(1rem,5vw,3rem);
     color: white;
+    min-height: 70vh;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -69,4 +71,12 @@
 .bmi--container button:hover{
     background-color: var(--primary-color);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .bmi--container{
+        background-image: none;
+    }
+
 }

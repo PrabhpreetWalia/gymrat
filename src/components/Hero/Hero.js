@@ -11,9 +11,9 @@ function Hero() {
         <h1>MAKE YOUR BODY</h1>
         <h2>FIT & PERFECT</h2>
         <PrimaryButton 
-            value="OUR CLASSES"
-            link="#"
-            color="white"/>
+            value="JOIN NOW"
+            href='/pricing'
+            />
     </div>
   )
 }

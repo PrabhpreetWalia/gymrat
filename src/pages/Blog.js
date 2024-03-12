@@ -7,7 +7,9 @@ function Blog() {
   return (
     <>
         <Navbar />
-        <News />
+        <News 
+          margin='14vh 0 0 0'
+        />
         <Footer />
     </>
   )
