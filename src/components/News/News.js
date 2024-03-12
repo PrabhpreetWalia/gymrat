@@ -1,39 +1,40 @@
 import React from "react";
 import "./News.css";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import { useState, useEffect } from "react";
 
-function News({margin = "10vh 0 0 0"}) {
+function News({ margin = "10vh 0 0 0", count}) {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    try {
+      fetch(count?`/news?num=${count}`: '/news')
+        .then((data) => data.json())
+        .then((data) => {
+          console.log(data);
+          setNews(data);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  }, []);
+
   return (
     <>
-      <div className="news--heading" style={{margin: margin}}><span className="main--heading">LATEST NEWS</span></div>
+      <div className="news--heading" style={{ margin: margin }}>
+        <span className="main--heading">LATEST NEWS</span>
+      </div>
       <div className="news--container">
-        <div className="news">
-          <div className="news--date">22.03.2023</div>
-          <h1>Yoga For Everyone in 2023</h1>
-          <h2>
-            This is program designed to make the practice of yoga beneficial for
-            people of all ages, abilities, and backgrounds.
-          </h2>
-          <PrimaryButton value="Read More" isBlack={true} />
-        </div>
-        <div className="news">
-          <div className="news--date">22.03.2023</div>
-          <h1>Yoga For Everyone in 2023</h1>
-          <h2>
-            This is program designed to make the practice of yoga beneficial for
-            people of all ages, abilities, and backgrounds.
-          </h2>
-          <PrimaryButton value="Read More" isBlack={true} />
-        </div>
-        <div className="news">
-          <div className="news--date">22.03.2023</div>
-          <h1>Yoga For Everyone in 2023</h1>
-          <h2>
-            This is program designed to make the practice of yoga beneficial for
-            people of all ages, abilities, and backgrounds.
-          </h2>
-          <PrimaryButton value="Read More" isBlack={true} />
-        </div>
+        {news.map((item, index) => {
+          return (
+            <div className="news" key={index}>
+              <div className="news--date">{item.date}</div>
+              <h1>{item.headline}</h1>
+              <h2>{item.content}</h2>
+              <PrimaryButton value="Read More" isBlack={true} href="/blog"/>
+            </div>
+          );
+        })}
       </div>
     </>
   );

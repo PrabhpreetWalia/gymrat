@@ -17,6 +17,7 @@ function Home() {
       <WhoWeAre />
       <News 
         margin='2rem 0 0 0'
+        count={3}
       />  
       <BMICalculator />
       <Pricing 
