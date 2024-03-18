@@ -9,6 +9,7 @@ function Blog() {
         <Navbar />
         <News 
           margin='14vh 0 0 0'
+          count={-1}
         />
         <Footer />
     </>

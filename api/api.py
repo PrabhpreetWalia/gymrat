@@ -1,3 +1,4 @@
+import math
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -62,16 +63,28 @@ news_data = [
     "headline": "Gym Closed for Maintenance",
     "content": "Please note that our gym will be closed for maintenance on [date]. We apologize for any inconvenience and appreciate your understanding.",
     "date": "01/03/2024"
+  },
+  {
+    "headline": "Gym Closed for Maintenance",
+    "content": "Please note that our gym will be closed for maintenance on [date]. We apologize for any inconvenience and appreciate your understanding.",
+    "date": "01/03/2024"
   }
 ]
 
-
 @app.route("/news")
 def news():
-    count_news = int(request.args.get('num', default=0))
-    if count_news == 0:
-        return jsonify(news_data)
+    count_news = int(request.args.get('num'))
+    page_number = int(request.args.get('page', default=1))
+    print(count_news, page_number)
+    if count_news == -1:
+        starting_index = 6*(page_number-1)
+        return jsonify(news_data[starting_index:starting_index+6])
+    
     return jsonify(news_data[:count_news])
+
+@app.route("/count-news")
+def count_news():
+    return '{"pageCount": "' + str(math.ceil((len(news_data)/6))) + '"}'
 
 if(__name__ == "__main__"):
     app.run(debug=True)

@@ -7,7 +7,7 @@ nav{
     width: 100%;
     position:fixed;
     top: 0;
-    background-color: black;
+    background-color: rgb(17, 17, 17);
     color: white;
     padding-inline: 2rem;
     z-index: 9999999;
@@ -28,9 +28,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    
 }
 
-.nav--right li{
+.nav--right li
+{
     list-style: none;
 
 }
@@ -39,4 +41,36 @@ nav{
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.nav--menu-button{
+    font-size: 2rem;
+    display: none;
+}
+
+@media screen and (max-width:650px) {
+    
+    .nav--right{
+        display: none;
+    }
+
+    .nav--menu-button{
+        display: block;
+    }
+
+    .mobile--nav{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgb(17, 17, 17);
+        height: 90vh;
+        left: 0;
+        bottom: 10vh;
+        width: 100%;
+        transform:translateY(100vh);
+    }
+
+    .nav--right{
+        padding: 3rem;
+    }
 }

@@ -15,7 +15,7 @@ function WhoWeAre() {
                 value="TAKE A TOUR"
                 isBlack={true}
                 margin="1rem 0"
-                href='/gallery'
+                href='/'
             />
             
         </div>

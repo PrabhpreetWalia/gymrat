@@ -6,7 +6,6 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import PricingPage from './pages/PricingPage';
 import ContactUs from './pages/ContactUs';
-import Gallery from './pages/Gallery'
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 
@@ -22,12 +21,8 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/blog",
+    path: "/blog/:page",
     element: <Blog />,
-  },
-  {
-    path: "/gallery",
-    element: <Gallery />,
   },
   {
     path: "/pricing",

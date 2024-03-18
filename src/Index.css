@@ -8,4 +8,5 @@
 :root{
     --primary-color: #0B60B0;
     --secondary-color: #000000;
+    scroll-behavior: smooth;
 }
