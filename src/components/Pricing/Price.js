@@ -3,9 +3,9 @@ import PrimaryButton from '../PrimaryButton/PrimaryButton'
 
 function Price({level, price, advantages, img}) {
 
-    const adv = advantages.map((advantage) => {
+    const adv = advantages.map((advantage, index) => {
         return(
-            <div className='advantage'>{advantage}</div>
+            <div className='advantage' key={index}>{advantage}</div>
         )
     }
     )

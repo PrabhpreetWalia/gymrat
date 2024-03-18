@@ -13,13 +13,15 @@ function News({ margin = "10vh 0 0 0", count=-1}) {
 
   const {page} = useParams()
 
+  let API_URL = "https://gymrat-api-five.vercel.app"
+
   useEffect(() => {
 
     try{
 
       if (count != -1) return
 
-      fetch('/count-news')
+      fetch(`${API_URL}/count-news`)
         .then(res => res.json())
         .then((data) => {
 
@@ -45,7 +47,7 @@ function News({ margin = "10vh 0 0 0", count=-1}) {
 
       if (count != -1){
 
-        fetch(`/news?num=${count}`)
+        fetch(`${API_URL}/news?num=${count}`)
           .then(data => data.json())
           .then((data) => {
             setNews(data)
@@ -53,7 +55,7 @@ function News({ margin = "10vh 0 0 0", count=-1}) {
 
       }
       else{
-        fetch(`/news?num=${count}&page=${page}`)
+        fetch(`${API_URL}/news?num=${count}&page=${page}`)
         .then((data) => data.json())
         .then((data) => {
           setNews(data);

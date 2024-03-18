@@ -9,13 +9,13 @@ function Navbar() {
     const navRight = document.getElementsByClassName('nav--right')[0]
     const menuButton = document.getElementsByClassName('nav--menu-button')[0]
 
-    if (menuButton.innerHTML == "="){
+    if (menuButton.innerHTML === "="){
       menuButton.innerHTML = "x"
     }
     else{
       menuButton.innerHTML = "="
     }
-    
+
     navRight.classList.toggle("mobile--nav")
   }
  
