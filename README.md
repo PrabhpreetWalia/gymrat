@@ -6,5 +6,8 @@
 - React JS
 - Flask
 
-#Screenshots of the Project 📸
+# Screenshots of the Project 📸
 
+<img src="./demo-images/home.png" alt="Home Page">
+<img src="./demo-images/blog.png" alt="Home Page" >
+<img src="./demo-images/contact.png" alt="Home Page" >
