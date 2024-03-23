@@ -57,6 +57,7 @@ function News({ margin = "10vh 0 0 0", count = -1 }) {
 
       }
       else{
+        setNews([])
         fetch(`${API_URL}/news?num=${count}&page=${page}`)
         .then((data) => data.json())
         .then((data) => {
