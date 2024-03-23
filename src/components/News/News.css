@@ -16,7 +16,7 @@
     padding: 2rem;
 }
 
-.news{
+.news, .news--skeleton{
     flex-shrink: 0;
     flex-grow: 1;
     flex-basis: 30%;
@@ -28,6 +28,33 @@
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
+}
+
+.news--skeleton{
+    align-items: center;
+    justify-content: center;
+}
+
+.news--skeleton-bar{
+    width: 100%;
+    height: 10px;
+    background: #bebebe;
+    border-radius: 5px;
+    animation: skeleton-loading 2s ease-in-out 0s infinite alternate forwards;
+}
+
+@keyframes skeleton-loading {
+    0%{
+        opacity: 100%;
+    }
+
+    50%{
+        opacity: 50%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
 }
 
 .news:hover{
