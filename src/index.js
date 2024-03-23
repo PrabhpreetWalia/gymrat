@@ -8,7 +8,10 @@ import PricingPage from './pages/PricingPage';
 import ContactUs from './pages/ContactUs';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 
 const router = createBrowserRouter([
   {

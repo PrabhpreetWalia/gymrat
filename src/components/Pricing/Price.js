@@ -12,7 +12,7 @@ function Price({level, price, advantages, img}) {
 
   return (
     
-    <div className="price">
+    <div className="price" data-aos="fade-up" data-aos-duration="1200" data-aos-offsest="400" data-aos-once="true">
         <div className="background"><img src={img} alt="Pricing Background" /></div>
         <div className="level">{level}</div>
         <div className="price-div"><span className='price--symbol'>₹</span> <span className='amount'>{price}</span> <span className='price--symbol'>p/m</span></div>

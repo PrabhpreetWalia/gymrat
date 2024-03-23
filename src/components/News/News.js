@@ -4,7 +4,10 @@ import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { useState, useEffect } from "react";
 import { Link, generatePath, useParams } from "react-router-dom";
 
+
+
 function News({ margin = "10vh 0 0 0", count = -1 }) {
+  
   window.scrollTo({ top: 0, behavior: "smooth" });
 
   const [news, setNews] = useState([]);
@@ -107,7 +110,7 @@ function News({ margin = "10vh 0 0 0", count = -1 }) {
       <div className="news--heading" style={{ margin: margin }}>
         <span className="main--heading">LATEST NEWS</span>
       </div>
-      <div className="news--container">
+      <div className="news--container" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
         {news.length === 0 ? skeletonLoading() : newsPropogate()}
       </div>
       <div className="pagination--container">{pagination}</div>

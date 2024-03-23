@@ -20,7 +20,7 @@ function Navbar() {
   }
  
   return (
-    <nav>
+    <nav data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
       <div className="nav--left">Gym Rat</div>
 
       <ul className="nav--right">

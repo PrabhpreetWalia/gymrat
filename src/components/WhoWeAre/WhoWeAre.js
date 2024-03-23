@@ -6,8 +6,8 @@ import runText from './running-text.png'
 
 function WhoWeAre() {
   return (
-    <div className='WhoWeAre--container'>
-        <div className="WhoWeAre--left">
+    <div className='WhoWeAre--container' >
+        <div className="WhoWeAre--left" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
             <div className="main--heading">WHO WE ARE</div>
             <h1>Take Your Health And Body To Next Level</h1>
             <p>Take your health and body to the next level with our comprehensive program designed to help you reach your fitness goals.</p>
@@ -19,7 +19,7 @@ function WhoWeAre() {
             />
             
         </div>
-        <div className="WhoWeAre--right">
+        <div className="WhoWeAre--right" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
             <img src={girlRun} className="girl-running" alt="" />
             <img src={runText} className="running-text" alt="" />
         </div>

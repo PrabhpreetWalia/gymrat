@@ -6,12 +6,12 @@ import PrimaryButton from '../PrimaryButton/PrimaryButton'
 function Contact() {
   return (
     <div className="contact--container">
-        <div className="contact--details">
+        <div className="contact--details" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
             <h1>We are here for help you! To Shape Your Body.</h1>
             <p>At Gymate, we are dedicated to helping you achieve the body of your dreams. Our expert trainers and nutritionists will work with you to create a personalized fitness and nutrition plan that helps you reach your specific goals.</p>
 
         </div>
-        <Form className="contact--form">
+        <Form className="contact--form" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
             <div className="contact--heading">Leave Us Your Info</div>
             <input type="text" placeholder='Full Name' />
             <input type="text" placeholder='Email Address' />

@@ -14,7 +14,7 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 40%;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .contact--details h1{
@@ -31,18 +31,17 @@
 }
 
 .contact--form{
-    /* background: red; */
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
+    min-width: 250px;
 }
 
 .contact--form > input, .contact--form > textarea, .contact--form > select{
     color: rgb(63, 63, 63);
-    width: 100%;
+    width: 90%;
     margin: 0.5rem 0;
     padding: 0.5rem;
     font-size: 1.1rem;

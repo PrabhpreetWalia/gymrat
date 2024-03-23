@@ -60,7 +60,7 @@ function BMICalculator() {
 
 
   return (
-    <div className="bmi--container">
+    <div className="bmi--container" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
       <h1>
         Let's Calculate Your <span className="primary-color">BMI</span>
       </h1>
