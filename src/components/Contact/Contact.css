@@ -39,7 +39,7 @@
     min-width: 250px;
 }
 
-.contact--form > input, .contact--form > textarea, .contact--form > select{
+.contact--form > input, .contact--form > textarea, .contact--form > select, .contact--form > .class--container{
     color: rgb(63, 63, 63);
     width: 90%;
     margin: 0.5rem 0;
@@ -69,4 +69,42 @@
     height: 5px;
     bottom: 0;
     left: 0;
+}
+
+.contact--form > .class--container{
+    height: auto;
+    border: none;
+    padding-left: 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+}
+
+.class--container input{
+    display: none;
+}
+
+.class--container label{
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 8px;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+}
+
+.class--button > input:checked ~ label {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.selected--price{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(102, 102, 102);
+    padding-bottom: 1rem;
 }

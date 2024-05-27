@@ -1,0 +1,83 @@
+.weight--container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.line-chart{
+    width: clamp(300px, 80vw, 700px);
+}
+
+.btn--container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tracker--btn{
+  text-transform: capitalize;
+  padding: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: rgb(190, 182, 238);
+}
+
+.tracker--active{
+  background: var(--primary-color);
+}
+
+.add--container{
+  position: relative;
+}
+
+.add--box{
+  padding: 0.5rem;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.add--box input{
+  border: 1px solid rgb(189, 189, 189);
+  padding: 0.2rem;
+  font-size:medium;
+  text-transform: capitalize;
+}
+
+.add--box input:focus{
+  outline: none;
+}
+
+.add--box button{
+  background: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .weight--container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line-chart{
+    width: 95%;
+  }
+
+  .btn--container{
+    flex-direction: row;
+  }
+}

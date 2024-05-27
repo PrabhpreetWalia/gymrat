@@ -15,7 +15,7 @@ function News({ margin = "10vh 0 0 0", count = -1 }) {
 
   const { page } = useParams();
 
-  let API_URL = "https://gymrat-api-five.vercel.app";
+  let API_URL = "http://localhost:1337";
 
   useEffect(() => {
     try {
@@ -26,7 +26,7 @@ function News({ margin = "10vh 0 0 0", count = -1 }) {
         .then((data) => {
           const pageCount = data.pageCount;
           let paginationHTML = [];
-
+          console.log(pageCount)
           for (let i = 1; i <= pageCount; i++) {
             paginationHTML.push(
               <Link key={i} to={generatePath("/blog/:page", { page: i })}>
@@ -80,7 +80,6 @@ function News({ margin = "10vh 0 0 0", count = -1 }) {
           <div className="news--date">{item.date}</div>
           <h1>{item.headline}</h1>
           <h2>{item.content}</h2>
-          <PrimaryButton value="Read More" isBlack={true} href="/blog/1" />
         </div>
       );
     });

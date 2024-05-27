@@ -17,11 +17,7 @@ function Price({level, price, advantages, img}) {
         <div className="level">{level}</div>
         <div className="price-div"><span className='price--symbol'>₹</span> <span className='amount'>{price}</span> <span className='price--symbol'>p/m</span></div>
         {adv}
-        <PrimaryButton 
-            value="Purchase"
-            isBlack={true}
-            href='/contact'
-        />
+
     </div>
 
   )

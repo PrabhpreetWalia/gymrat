@@ -2,7 +2,7 @@ import React from "react";
 import './Navbar.css'
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar( {linkName="Login", link="/dashboard"}) {
 
 
   function toggleMobileNav() {
@@ -17,6 +17,11 @@ function Navbar() {
     }
 
     navRight.classList.toggle("mobile--nav")
+  }
+
+  function handleLogout(){
+    window.scrollTo(0,0)
+    localStorage.removeItem("token")
   }
  
   return (
@@ -47,6 +52,11 @@ function Navbar() {
         <li>
           <Link onClick={window.scrollTo(0,0)} rel="stylesheet" to="/contact">
             Contact Us
+          </Link>
+        </li>
+        <li className="login--button">
+          <Link onClick={handleLogout} rel="stylesheet" to={link}>
+            {linkName}
           </Link>
         </li>
       </ul>

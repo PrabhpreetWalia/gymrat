@@ -1,0 +1,129 @@
+.exercise--container{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.exercise--left{
+    width: fit-content;
+    padding: 1rem;
+    padding-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.exercise--buton{
+    background: rgb(165, 166, 228);
+    color: white;
+
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    
+}
+
+.exercise--right{
+    background: var(--primary-color);
+    width: 80%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.exercise{
+    background: white;
+    padding: 0.4rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.exercise img{
+    height: 130px;
+}
+
+.exercise--details{
+    text-transform: capitalize;
+}
+
+.active{
+    background: var(--primary-color);
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: #000000a9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999999;
+}
+
+.popup--container{
+    background: white;
+    width: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup--topbar{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup--close{
+    background: red;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.4rem;
+}
+
+.popup--container img{
+    height: 50%;
+}
+
+.exercise--instructions{
+    width: 100%;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .exercise--container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .exercise--left{
+        flex-direction: row;
+    }
+    .popup--container{
+        width: 80%;
+    }
+    .exercise--buton{
+        width: fit-content;
+    }
+}

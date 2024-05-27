@@ -10,6 +10,9 @@ import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp'
+import Dashboard from './pages/Dashboard'
 
 AOS.init();
 
@@ -34,7 +37,20 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactUs />,
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp />
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />
   }
+
 
 ]);
 
