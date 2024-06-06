@@ -24,7 +24,7 @@
     margin-bottom: 2rem;
 }
 
-input[type="email"], input[type="password"], input[type="text"]{
+.auth--container input[type="email"], .auth--container input[type="password"], .auth--container input[type="text"]{
     width: 16rem;
     height: 2rem;
     margin-bottom: 1.3rem;
@@ -33,7 +33,7 @@ input[type="email"], input[type="password"], input[type="text"]{
     font-size: 1.3rem;
 }
 
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus{
+.auth--container input[type="email"]:focus, .auth--container input[type="password"]:focus, .auth--container input[type="text"]:focus{
     outline: none;
 }
 

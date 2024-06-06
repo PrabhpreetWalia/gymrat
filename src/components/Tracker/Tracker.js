@@ -46,7 +46,7 @@ function Tracker({ token }) {
   });
 
   useEffect(() => {
-    fetch("http://localhost:1337/user/measurements", {
+    fetch(`${process.env.REACT_APP_API_URL}/user/measurements`, {
       headers: {
         "x-access-token": token,
       },
@@ -134,7 +134,7 @@ function Tracker({ token }) {
       return;
     }
 
-    fetch("http://localhost:1337/user/add", {
+    fetch(`${process.env.REACT_APP_API_URL}/user/add`, {
       method: "POST",
       headers: {
         "x-access-token": token,

@@ -15,7 +15,7 @@ function News({ margin = "10vh 0 0 0", count = -1 }) {
 
   const { page } = useParams();
 
-  let API_URL = "http://localhost:1337";
+  let API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     try {

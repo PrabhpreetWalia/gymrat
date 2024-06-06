@@ -13,7 +13,7 @@ function SignUp() {
   async function handleSignUp(e) {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:1337/api/sign-up", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/sign-up`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

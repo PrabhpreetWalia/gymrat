@@ -10,7 +10,7 @@ function ExerciseTracker({ clickedDate, token, setExeDates}) {
   
   useEffect(() => {
     const formattedDate = clickedDate.format("YYYY-MM-DD");
-    const url = `http://localhost:1337/user/exercises?date=${formattedDate}`;
+    const url = `${process.env.REACT_APP_API_URL}/user/exercises?date=${formattedDate}`;
 
     fetch(url, {
         method: "GET",
@@ -33,7 +33,7 @@ function ExerciseTracker({ clickedDate, token, setExeDates}) {
 
   function handleSave() {
 
-    fetch("http://localhost:1337/user/exercises", {
+    fetch(`${process.env.REACT_APP_API_URL}/user/exercises`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -104,10 +104,10 @@ function ExerciseTracker({ clickedDate, token, setExeDates}) {
         ))}
 
         <div className="exe--li">
-            <div className="drag-icon">=</div>
             <input type="text" placeholder="New Exercise" value={newExe} onChange={(e)=> {setNewExe(e.target.value)}}/>
             <input type="number" placeholder="Sets" value={newSet} onChange={(e)=> {setNewSet(e.target.value)}}/>
             <input type="number" placeholder="Reps" value={newRep} onChange={(e)=> {setNewRep(e.target.value)}}/>
+            
             <button
               onClick={() => {handleAdd()}}
               className="add-btn"

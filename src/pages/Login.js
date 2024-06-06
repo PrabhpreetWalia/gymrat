@@ -13,7 +13,7 @@ function Login() {
   async function handleLogin(e) {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:1337/api/login", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -39,7 +39,7 @@ function Login() {
       <Navbar />
       <div className="auth--hero">
         <form className="auth--container" onSubmit={handleLogin}>
-        <div className="auth--heading">Login</div>
+          <div className="auth--heading">Login</div>
           <input
             type="email"
             value={email}
@@ -53,7 +53,9 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <input type="submit" value="Login" />
-        <div className="auth--footer">Dont Have an account? <Link to="/sign-up">Sign up</Link></div>
+          <div className="auth--footer">
+            Dont Have an account? <Link to="/sign-up">Sign up</Link>
+          </div>
         </form>
       </div>
       <Footer />

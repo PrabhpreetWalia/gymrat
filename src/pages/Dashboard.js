@@ -22,7 +22,7 @@ function Dashboard(){
 
         if(token){
 
-            const response = fetch('http://localhost:1337/login',{
+            const response = fetch(`${process.env.REACT_APP_API_URL}/login`,{
                 method: 'GET',
                 headers: {
                     "x-access-token": token
