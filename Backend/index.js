@@ -298,8 +298,8 @@ app.get("/count-news", (req, res) => {
 });
 
 app.get("/", (req, res)=> {
-  return(<h1>API is working</h1>)
-  
+  res.json({message: "API is working..."})
+
 })
 
 app.listen(PORT, () => {
