@@ -297,6 +297,10 @@ app.get("/count-news", (req, res) => {
   res.json({ pageCount: pageCount.toString() });
 });
 
+app.get("/", (req, res)=> {
+  return(<h1>API is working</h1>)
+})
+
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
