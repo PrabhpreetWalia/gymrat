@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Navbar.css'
 import { Link } from "react-router-dom";
 
 function Navbar( {linkName="Login", link="/dashboard"}) {
 
+  useEffect(()=>{
+    try{
+      console.log(localStorage.getItem('token'))
+    }
+    catch(e){
+      console.log(e)
+    }
+  },[])
 
   function toggleMobileNav() {
     const navRight = document.getElementsByClassName('nav--right')[0]

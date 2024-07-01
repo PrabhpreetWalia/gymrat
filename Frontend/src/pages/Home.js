@@ -9,6 +9,7 @@ import Footer from '../components/Footer/Footer'
 import Pricing from '../components/Pricing/Pricing'
 
 function Home() {
+
   return (
     <div>
       <Navbar />

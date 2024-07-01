@@ -87,8 +87,7 @@ function ExerciseTracker({ clickedDate, token, setExeDates}) {
 
       <div className="exe--list">
         {exeList.map((exe, index) => (
-          <div key={index} className="exe--li" draggable>
-            <div className="drag-icon">=</div>
+          <div key={index} className="exe--li">
             <div className="exe--info">
             <div className="exe--name">{exe.name}</div>
             <div className="exe--reps">({exe.sets} X {exe.reps})</div>

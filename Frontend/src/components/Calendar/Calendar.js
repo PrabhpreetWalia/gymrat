@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import "./Calendar.css";
 import ExerciseTracker from "./ExerciseTracker";
 
-function Calendar({token}) {
+function Calendar({ token }) {
   const months = [
     "January",
     "Feburary",
@@ -22,28 +22,28 @@ function Calendar({token}) {
   const [year, setYear] = useState(dayjs().year());
 
   const [days, setDays] = useState([]);
-  const [clickedDate, setClickedDate] = useState(dayjs())
-  const [exeDates, setExeDates] = useState([])
+  const [clickedDate, setClickedDate] = useState(dayjs());
+  const [exeDates, setExeDates] = useState([]);
 
   useEffect(() => {
     const firstDateOfMonth = dayjs().year(year).month(month).startOf("month");
     const lastDateOfMonth = dayjs().year(year).month(month).endOf("month");
-    var temp = [];
+    let temp = [];
 
     for (let i = 0; i < firstDateOfMonth.day(); i++) {
-      var tempDay = firstDateOfMonth.day(i);
+      let tempDay = firstDateOfMonth.day(i);
       tempDay["isActive"] = false;
       temp.push(tempDay);
     }
 
     for (let i = firstDateOfMonth.date(); i <= lastDateOfMonth.date(); i++) {
-      var tempDay = firstDateOfMonth.date(i);
+      let tempDay = firstDateOfMonth.date(i);
       tempDay["isActive"] = true;
       temp.push(tempDay);
     }
 
     for (let i = lastDateOfMonth.day() + 1; i < 7; i++) {
-      var tempDay = lastDateOfMonth.day(i);
+      let tempDay = lastDateOfMonth.day(i);
       tempDay["isActive"] = false;
       temp.push(tempDay);
     }
@@ -84,18 +84,29 @@ function Calendar({token}) {
 
         <div className="calendar--dates">
           {days.map((day, index) => (
-            
-            <button className={`${day.isSame(clickedDate, "day") ? "selected--date" : ""} date-btn ${exeDates.includes(day.format("YYYY-MM-DD")) ? "highlighted-btn " : ""}`} key={index} onClick={()=>{setClickedDate(day)}} disabled={!day.isActive}>
+            <button
+              key={index}
+              className={`${
+                day.isSame(clickedDate, "day") ? "selected--date" : ""
+              } date-btn ${
+                exeDates.includes(day.format("YYYY-MM-DD"))
+                  ? "highlighted-btn "
+                  : ""
+              }`}
+              onClick={() => {
+                setClickedDate(day);
+              }}
+              disabled={!day.isActive}
+            >
               {day.date()}
             </button>
           ))}
-
         </div>
       </div>
-      <ExerciseTracker 
-        clickedDate = {clickedDate}
-        token = {token}
-        setExeDates = {setExeDates}
+      <ExerciseTracker
+        clickedDate={clickedDate}
+        token={token}
+        setExeDates={setExeDates}
       />
     </div>
   );
