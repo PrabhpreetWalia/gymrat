@@ -12,7 +12,7 @@ function Exercise() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '6c8d108cfemsh5eb14526f8009d5p10af3bjsn32aa256738af',
+        'X-RapidAPI-Key': '0ac18663damsha9b3867a302ce0bp1984b6jsnb3f3d7d6af98',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
       }
     };
